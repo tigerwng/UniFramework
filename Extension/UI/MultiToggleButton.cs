@@ -5,13 +5,14 @@ using UnityEngine.EventSystems;
 
 namespace tiger
 {
+    #pragma warning disable 0649
     [AddComponentMenu("Custom/UI/Multi Toggle Button", 1)]
     [RequireComponent(typeof(Image))]
     [RequireComponent(typeof(CanvasRenderer))]
     public class MultiToggleButton : Button
     {
         [SerializeField]
-        private Sprite[] m_optionSources;
+        private Sprite[] m_optionSources = null;
 
         [SerializeField]
         private int m_curOptionIndex;

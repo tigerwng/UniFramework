@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2017-12-14 16:06:15 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2017-12-14 16:07:50
+ * @Last Modified time: 2018-05-23 17:44:26
  */
 
 
@@ -16,7 +16,7 @@ namespace tiger
 		/// Gets the unix time. 将参数datetime转换为Unix时间戳
 		/// </summary>
 		/// <returns>The unix time.</returns>
-		/// <param name="dateTime">Date time.</param>
+		/// <param name="dateTime">Date time. If want get current time, then could use `DateTime.Now`</param>
 		public static long GetUnixTime(DateTime dateTime)
 		{
 			return (dateTime.ToUniversalTime().Ticks / 10000000 - 62135596800);

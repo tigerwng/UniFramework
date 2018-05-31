@@ -5,16 +5,16 @@ using System.Collections;
 
 namespace tiger
 {
-    public class AudioTool : MonoBehaviour
+    public class AudioHelper : MonoBehaviour
     {
         
 
-        public static AudioTool GetInstance()
+        public static AudioHelper GetInstance()
         {
             if(m_instance == null)
             {
-                var obj = new GameObject("AudioTool");
-                m_instance = obj.AddComponent<AudioTool>();
+                var obj = new GameObject("AudioHelper");
+                m_instance = obj.AddComponent<AudioHelper>();
                 
                 DontDestroyOnLoad(m_instance.gameObject);
             }
@@ -32,7 +32,7 @@ namespace tiger
             }
         }
 
-        private static AudioTool m_instance = null;
+        private static AudioHelper m_instance = null;
 
 
 
