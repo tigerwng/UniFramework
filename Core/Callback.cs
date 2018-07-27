@@ -13,4 +13,8 @@ namespace tiger
     public delegate void CallbackFunc_0();
 
     public delegate void CallbackFunc_1<T>(T t);
+
+    public delegate void CallbackFunc_2<T1, T2>(T1 t1, T2 t2);
+
+    public delegate void CallbackFunc_3<T1, T2, T3>(T1 t1, T2 t2, T3 t3);
 }

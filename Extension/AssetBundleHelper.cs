@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2017-11-15 15:49:49 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2018-05-16 11:23:19
+ * @Last Modified time: 2018-06-11 11:25:52
  */
 
 
@@ -21,7 +21,7 @@ namespace tiger
         #elif UNITY_ANDROID
             var streamingAssetsPath = Application.dataPath + "!assets/";
         #elif UNITY_IOS
-            var streamingAssetsPath =Application.dataPath + "/Raw/";
+            var streamingAssetsPath = Application.dataPath + "/Raw/";
         #endif
             return Path.Combine(streamingAssetsPath, relativePath);
         }

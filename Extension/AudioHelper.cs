@@ -49,16 +49,15 @@ namespace tiger
 
             if(clip)
             {
+                UniLog.Info("play effect [" + file + "]");
                 audioSource.PlayOneShot(clip);
                 Destroy(obj, clip.length);
-
                 return clip.length;
             }
             else
             {
                 Debug.LogWarningFormat("load clip failed [{0}]", file);
                 Destroy(obj);
-
                 return 0;
             }
         }
