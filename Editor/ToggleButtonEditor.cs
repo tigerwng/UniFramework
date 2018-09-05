@@ -21,6 +21,8 @@ public class ToggleButtonEditor : Editor
 
         private SerializedProperty m_IsOnProperty;
 
+        private SerializedProperty m_isAutoUpdateProperty;
+
         void OnEnable()
         {
             m_serializedObject = new SerializedObject(target);
@@ -35,6 +37,8 @@ public class ToggleButtonEditor : Editor
             m_TargetGraphicProperty = m_serializedObject.FindProperty("m_TargetGraphic");
 
             m_IsOnProperty          = m_serializedObject.FindProperty("m_isOn");
+
+            m_isAutoUpdateProperty = m_serializedObject.FindProperty("m_isAutoUpdate");
         }
 
         public override void OnInspectorGUI()
@@ -46,6 +50,8 @@ public class ToggleButtonEditor : Editor
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(m_IsOnProperty);
+
+            EditorGUILayout.PropertyField(m_isAutoUpdateProperty);
 
             var graphic = m_TargetGraphicProperty.objectReferenceValue as Graphic;
             if (graphic == null)

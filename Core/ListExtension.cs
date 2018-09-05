@@ -2,10 +2,11 @@
  * @Author: zhen wang 
  * @Date: 2018-05-02 09:59:08 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2018-05-02 11:10:05
+ * @Last Modified time: 2018-08-09 10:54:29
  */
 
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 namespace tiger
@@ -20,16 +21,31 @@ namespace tiger
             }
         }
 
-        public static string ConvertToString<T>(this List<T> list)
+        public static string ToStringOneElementByOneLine<T>(this List<T> list)
         {
-            string ret = "";
+            StringBuilder sb = new StringBuilder();
             for(int i=0; i<list.Count; i++)
             {
-                ret += list[i].ToString();
-                ret += "|";
+                sb.AppendLine(list[i].ToString());
             }
 
-            return ret;
+            return sb.ToString();
+        }
+
+        public static string ToStringBySeparator<T>(this List<T> list, char separator)
+        {
+            StringBuilder sb = new StringBuilder();
+            for(int i=0; i<list.Count; i++)
+            {
+                sb.Append(list[i].ToString());
+
+                if(i < list.Count-1)
+                {
+                    sb.Append(separator);
+                }
+            }
+
+            return sb.ToString();
         }
 
         public static bool IsAllElementsUnique<T>(this List<T> list)
