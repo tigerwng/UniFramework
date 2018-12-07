@@ -14,6 +14,19 @@ namespace tiger
 {
     public sealed class AssetBundleHelper
     {
+        public static string StreamingAssetsFileURL(string relativePath)
+        {
+            #if UNITY_EDITOR
+            var path = "file://" + Application.dataPath + "/StreamingAssets";
+            #elif UNITY_ANDROID
+            var path = "jar:file://" + Application.dataPath + "!/assets/";
+            #else
+            var path = Application.streamingAssetsPath;
+            #endif
+
+            return Path.Combine(path, relativePath);
+        }
+
         static internal string GetBundlePathForLoadFromFile(string relativePath)
         {
         #if UNITY_EDITOR
