@@ -17,7 +17,7 @@ namespace tiger
         {
             for(int i=0; i<list.Count; i++)
             {
-                Debug.LogFormat("list[{0}]: " + list[i].ToString());
+                Debug.LogFormat("list[{0}]: ", list[i].ToString());
             }
         }
 
