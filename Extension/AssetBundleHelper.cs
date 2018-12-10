@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2017-11-15 15:49:49 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2018-08-06 14:29:11
+ * @Last Modified time: 2018-12-10 15:57:25
  */
 
 
@@ -12,7 +12,7 @@ using System.IO;
 
 namespace tiger
 {
-    public sealed class AssetBundleHelper
+    public static class AssetBundleHelper
     {
         public static string StreamingAssetsFileURL(string relativePath)
         {
