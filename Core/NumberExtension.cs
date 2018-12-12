@@ -32,7 +32,6 @@ namespace tiger
 
                 if(v < digit)
                 {
-                    UniLog.Info("output: " + v);
                     return value;
                 }
                 
