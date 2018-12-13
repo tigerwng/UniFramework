@@ -6,7 +6,7 @@ using CALL_BACL = System.Action<string>;
 
 
 
-namespace tiger
+namespace tiger.Extension.UI
 {
     public class Toast : MonoBehaviour
     {

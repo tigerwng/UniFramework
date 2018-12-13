@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 
 
-namespace tiger
+namespace tiger.Extension.UI
 {
     [AddComponentMenu("Custom/UI/Toggle Button", 1)]
     [RequireComponent(typeof(Image))]

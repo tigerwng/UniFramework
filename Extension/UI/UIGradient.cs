@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-namespace tiger.UI
+namespace tiger.Extension.UI
 {
     [AddComponentMenu("UniFramework/UI Effects/Gradient")]
     public class UIGradient : BaseMeshEffect

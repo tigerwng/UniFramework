@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using tiger;
+using tiger.Extension.UI;
 
 [CustomEditor(typeof(MultiToggleButton), true)]
 [CanEditMultipleObjects]
