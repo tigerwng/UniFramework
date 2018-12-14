@@ -29,13 +29,13 @@ namespace tiger
 
         static internal string GetBundlePathForLoadFromFile(string relativePath)
         {
-        #if UNITY_EDITOR
-            var streamingAssetsPath = Application.streamingAssetsPath;
-        #elif UNITY_ANDROID
+#if UNITY_ANDROID && !UNITY_EDITOR
             var streamingAssetsPath = Application.dataPath + "!assets/";
-        #elif UNITY_IOS
+#elif UNITY_IOS && !UNITY_EDITOR
             var streamingAssetsPath = Application.dataPath + "/Raw/";
-        #endif
+#else
+            var streamingAssetsPath = Application.streamingAssetsPath;
+#endif
             return Path.Combine(streamingAssetsPath, relativePath);
         }
 
