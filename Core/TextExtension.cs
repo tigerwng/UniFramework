@@ -1,14 +1,15 @@
 /*
  * @Author: zhen wang 
  * @Date: 2018-04-16 17:23:06 
- * @Last Modified by:   zhen wang 
- * @Last Modified time: 2018-04-16 17:23:06 
+ * @Last Modified by: zhen wang
+ * @Last Modified time: 2018-12-14 14:03:34
  */
 
-
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
+
 
 public static class TextExtension
 {
