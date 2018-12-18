@@ -15,7 +15,7 @@ namespace tiger
 {
     public static class UniLog
     {   
-        static internal void Info(string msg)
+        public static void Info(string msg)
         {
         #if UNILOG_DEBUG
             StringBuilder sb = new StringBuilder();
@@ -25,14 +25,14 @@ namespace tiger
         #endif
         }
 
-        static internal void InfoFromat(string format, params object[] args)
+        public static void InfoFromat(string format, params object[] args)
         {
         #if UNILOG_DEBUG
             Info(string.Format(format, args));
         #endif
         }
 
-        static internal void Warning(string msg)
+        public static void Warning(string msg)
         {
         #if UNILOG_DEBUG
             StringBuilder sb = new StringBuilder();
@@ -42,14 +42,14 @@ namespace tiger
         #endif
         }
 
-        static internal void WarningFormat(string format, params object[] args)
+        public static void WarningFormat(string format, params object[] args)
         {
         #if UNILOG_DEBUG
             Warning(string.Format(format, args));
         #endif
         }
 
-        static internal void Error(string msg)
+        public static void Error(string msg)
         {
         #if UNILOG_DEBUG
             StringBuilder sb = new StringBuilder();
@@ -59,7 +59,7 @@ namespace tiger
         #endif       
         }
 
-        static internal void Print(string msg)
+        public static void Print(string msg)
         {
         #if UNILOG_DEBUG
             StringBuilder sb = new StringBuilder();
@@ -69,7 +69,7 @@ namespace tiger
         #endif
         }
 
-        static internal void CCAssert(bool cond, string msg)
+        public static void CCAssert(bool cond, string msg)
         {   
         #if UNILOG_DEBUG
             if(!cond)

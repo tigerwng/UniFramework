@@ -16,13 +16,13 @@ namespace tiger
     {
         public static string StreamingAssetsFileURL(string relativePath)
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             var path = "file://" + Application.dataPath + "/StreamingAssets";
-            #elif UNITY_ANDROID
+#elif UNITY_ANDROID
             var path = "jar:file://" + Application.dataPath + "!/assets/";
-            #else
+#else
             var path = Application.streamingAssetsPath;
-            #endif
+#endif
 
             return Path.Combine(path, relativePath);
         }
