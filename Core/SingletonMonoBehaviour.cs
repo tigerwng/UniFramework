@@ -39,7 +39,7 @@ namespace tiger.Core
 
         protected virtual void Start()
         {
-            DontDestroyOnLoad(_instance.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
 
         void OnApplicationQuit()
