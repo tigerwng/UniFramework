@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2018-11-26 13:04:12 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2018-11-26 15:39:08
+ * @Last Modified time: 2018-12-28 16:21:34
  */
 
 using System;
@@ -20,10 +20,15 @@ namespace tiger
         /// <param name="value">必须为正整数的字符串</param>
         /// <param name="digit">缩写规则</param>
         /// <param name="splits">数字单位 k, m, g, t...etc</param>
-        public static string FormatPositiveIntegerAbbreviation(string value, float digit, char[] splits)
+        public static string FormatPositiveIntegerAbbreviation(string value, float digit, char[] splits=null)
         {
             try
             {
+                if(splits == null)
+                {
+                    splits = new char[]{'K', 'M', 'G', 'T'};
+                }
+
                 ulong v = Convert.ToUInt64(value);
                 
                 double t = v;
