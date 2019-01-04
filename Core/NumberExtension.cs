@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2018-11-26 13:04:12 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2018-12-28 16:21:34
+ * @Last Modified time: 2019-01-04 19:57:41
  */
 
 using System;
@@ -14,6 +14,29 @@ namespace tiger
 {
     public static class NumberExtension
     {
+        public static string KiloFormat(float num)
+        {
+            //max: 9999000000
+            num = Mathf.Clamp(num, 0, 9999000000);
+
+            if(num >= 9999000000)
+                return (num / 1000000).ToString("#,0M") + "+";
+
+            if (num >= 100000000)
+                return (num / 1000000).ToString("#,0M");
+
+            if (num >= 10000000)
+                return (num / 1000000).ToString("0.#") + "M";
+
+            if (num >= 100000)
+                return (num / 1000).ToString("#,0K");
+
+            if (num >= 10000)
+                return (num / 1000).ToString("0.#") + "K";
+
+            return string.Format("{0:N2}", num);
+        } 
+
         /// <summary>
         /// 数字字符串缩写转换
         /// </summary>
