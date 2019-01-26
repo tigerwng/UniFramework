@@ -2,7 +2,7 @@
  * @Author: zhen wang 
  * @Date: 2019-01-16 11:50:30 
  * @Last Modified by: zhen wang
- * @Last Modified time: 2019-01-16 12:06:26
+ * @Last Modified time: 2019-01-26 19:49:14
  */
 
 using UnityEngine;
@@ -71,6 +71,8 @@ public class NativeShare : SingletonAssetMonoBehaviour<NativeShare>
         yield return new WaitForEndOfFrame();
 
         string screenShotPath = Path.Combine(Folder, ImageName);
+
+        Debug.Log("NativeShare::ShareSceneshot - [" + screenShotPath + "]");
 
         yield return new WaitForSeconds(1f);
 
