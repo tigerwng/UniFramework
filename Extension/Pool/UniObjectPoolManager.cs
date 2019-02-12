@@ -24,9 +24,9 @@ public sealed class UniObjectPoolManager : MonoBehaviour
     [ContextMenu("init pool")]
     void InitPool()
     {
-        UniLog.CCAssert(m_availabilityElements.Count==0, "Can not initialized pool, because this pool is not empty");
+        //UniLog.CCAssert(m_availabilityElements.Count==0, "Can not initialized pool, because this pool is not empty");
 
-        UniLog.CCAssert(m_prefab!=null, "Found error when initialize pool, case by prefab is null");
+        //UniLog.CCAssert(m_prefab!=null, "Found error when initialize pool, case by prefab is null");
 
         if(m_availabilityElements == null)
         {

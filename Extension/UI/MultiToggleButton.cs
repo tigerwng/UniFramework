@@ -89,13 +89,11 @@ namespace tiger.Extension.UI
             }
         }
 
-        
-    #if UNITY_EDITOR
+
         protected override void OnValidate()
         {
             UpdateToggleButton();
         }
-    #endif
         
     }
 }

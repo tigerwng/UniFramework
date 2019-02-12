@@ -116,13 +116,11 @@ namespace tiger.Extension.UI
             base.OnPointerClick(eventData);
         }
 
-        
-    #if UNITY_EDITOR
+
         protected override void OnValidate()
         {
             UpdateToggleButton();
         }
-    #endif
         
     }
 }
