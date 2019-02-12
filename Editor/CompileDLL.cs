@@ -27,7 +27,7 @@ namespace tiger
             }
             
             string[] references = new string[] {
-                Path.Combine(EditorApplication.applicationContentsPath, "MonoBleedingEdge/lib/mono/4.0-api/System.dll")
+                Path.Combine(EditorApplication.applicationContentsPath, "Mono/lib/mono/2.0/System.dll")
             };
             string[] defines = new string[] {
 
@@ -53,7 +53,7 @@ namespace tiger
                 Debug.Log(msg);
             }
 
-            
+            AssetDatabase.Refresh();
         }
     }
 }

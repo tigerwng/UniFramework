@@ -1,8 +1,8 @@
 /*
  * @Author: zhen wang 
  * @Date: 2018-12-14 14:05:32 
- * @Last Modified by:   zhen wang 
- * @Last Modified time: 2018-12-14 14:05:32 
+ * @Last Modified by: zhen wang
+ * @Last Modified time: 2019-01-26 17:23:54
  */
 
 using System;
@@ -46,51 +46,63 @@ namespace tiger
 
         public float PlayEffectSound(string file)
         {
-            var obj = new GameObject("effect sound");
-            obj.transform.parent = transform;
-
-            var audioSource = obj.AddComponent<AudioSource>();
-            audioSource.playOnAwake = false;
-            audioSource.loop = false;
-
             var clip = Resources.Load<AudioClip>(file);
 
             if(clip)
             {
-                UniLog.Info("play effect [" + file + "]");
+                var audioSource = this.CreateAudioSource(clip, "effect sound", 1.0f, false);
                 audioSource.PlayOneShot(clip);
-                Destroy(obj, clip.length);
+                
+                Destroy(audioSource.gameObject, clip.length);
+
                 return clip.length;
             }
-            else
-            {
-                Debug.LogWarningFormat("load clip failed [{0}]", file);
-                Destroy(obj);
-                return 0;
-            }
+
+            return 0;
         }
 
-        public void PlayBGM(string file)
+        public float PlayEffectSound(AudioClip audioClip)
         {
-            var objTran = transform.Find("BGM");
+            var audioSource = this.CreateAudioSource(audioClip, "effect sound", 1.0f, false);
+            audioSource.PlayOneShot(audioClip);
+
+            Destroy(audioSource.gameObject, audioClip.length);
+            
+            return audioClip.length;
+        }
+
+        AudioSource CreateAudioSource(AudioClip audioclip, string name, float volume=1.0f, bool loop=true, bool playOnWake=false)
+        {
+            var objTran = transform.Find(name);
 
             if(objTran == null)
             {
-                objTran = new GameObject("BGM").transform;
+                objTran = new GameObject(name).transform;
                 objTran.parent = transform;
                 objTran.gameObject.AddComponent<AudioSource>();
             }
 
             var audioSource = objTran.GetComponent<AudioSource>();
+            audioSource.playOnAwake = playOnWake;
+            audioSource.loop = loop;
+            audioSource.volume = volume;
+            audioSource.clip = audioclip;
 
-            audioSource.playOnAwake = false;
-            audioSource.loop = true;
+            return audioSource;
+        }
 
+        public void PlayBGM(AudioClip audioClip, float volume=1.0f)
+        {
+            var audioSource = this.CreateAudioSource(audioClip, "BGM", volume, true, false);  
+            audioSource.Play();
+        }
+
+        public void PlayBGM(string file, float volume=1.0f)
+        {
             var clip = Resources.Load<AudioClip>(file);
 
-            audioSource.clip = clip;
-
-            audioSource.Play();    
+            var audioSource = this.CreateAudioSource(clip, "BGM", volume, true, false);  
+            audioSource.Play();
         }
 
         public void StopBGM()
