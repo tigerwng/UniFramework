@@ -17,7 +17,7 @@ public abstract class UniPooledObject : MonoBehaviour
 
     public void PushToPool()
     {
-        //UniLog.CCAssert(Pool!=null, "Pool is not signed");
+        UniLog.CCAssert(Pool!=null, "Pool is not signed");
 
         Pool.AddToPool(this);
     }

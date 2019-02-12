@@ -58,7 +58,7 @@ namespace tiger.Extension.UI
             // IS_AUTO_UPDATE = true;
         }
 
-        protected virtual void UpdateToggleButton()
+        public virtual void UpdateToggleButton()
         {
             if(m_optionSources == null)
                 return;
@@ -89,11 +89,13 @@ namespace tiger.Extension.UI
             }
         }
 
-
+        
+#if UNITY_EDITOR
         protected override void OnValidate()
         {
             UpdateToggleButton();
         }
+#endif
         
     }
 }

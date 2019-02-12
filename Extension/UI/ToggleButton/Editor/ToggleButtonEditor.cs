@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using tiger.Extension.UI;
 
-[CustomEditor(typeof(tiger.Extension.UI.ToggleButton), true)]
+[CustomEditor(typeof(ToggleButton), true)]
 [CanEditMultipleObjects]
 public class ToggleButtonEditor : Editor
 {
