@@ -86,18 +86,22 @@ public class NativeShare : SingletonAssetMonoBehaviour<NativeShare>
             AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent");
             intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string>("ACTION_SEND"));
 
+#region Use File Uri
             // AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri");
             // AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file://" + screenShotPath);
+#endregion
 
+#region Use File Provider
             // use FileProvider to get uri
             string packageName = unityContext.Call<string>("getPackageName");
             string authority = packageName + ".provider";
             AndroidJavaObject fileObj = new AndroidJavaObject("java.io.File", screenShotPath);
             AndroidJavaClass fileProvider = new AndroidJavaClass("android.support.v4.content.FileProvider");
             AndroidJavaObject uriObject = fileProvider.CallStatic<AndroidJavaObject>("getUriForFile", unityContext, authority, fileObj);
-            
+#endregion
+
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject);
-            intentObject.Call<AndroidJavaObject>("setType", "image/png");
+            intentObject.Call<AndroidJavaObject>("setType", "image/*");
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), ShareMessage);
 
             AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Power By tigerWng");
