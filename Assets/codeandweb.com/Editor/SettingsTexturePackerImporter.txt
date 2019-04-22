@@ -2,10 +2,10 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/PolygonImageSample/texture packer/tp_menus.tpsheet
+- Assets/Sample/texture packer/tp_menus.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/PolygonImageSample/texture packer/tp_menus.png
+- Assets/Sample/texture packer/tp_menus.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - 

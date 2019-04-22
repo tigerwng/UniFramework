@@ -14,12 +14,17 @@ namespace tiger
 {
     public static class ListExtension
     {
-        public static void Print<T>(this List<T> list)
+        [System.Diagnostics.Conditional("UNITY_EDITOR")]
+        public static void Print<T>(this IList<T> list)
         {
+            StringBuilder sb = new StringBuilder();
+
             for(int i=0; i<list.Count; i++)
             {
-                Debug.LogFormat("list[{0}]: ", list[i].ToString());
+                sb.AppendLine(string.Format("list[{0}]: {1}", i, list[i].ToString()));
             }
+
+            Debug.Log(sb.ToString());
         }
 
         public static string ToStringOneElementByOneLine<T>(this List<T> list)
