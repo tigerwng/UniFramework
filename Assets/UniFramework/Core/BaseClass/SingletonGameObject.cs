@@ -1,4 +1,7 @@
 /*
+ * 单例类
+ *  * 单例类
+ * 创建unity脚本单例类，并加载在与类型同名的对象上。
  * @Author: zhen wang 
  * @Date: 2019-04-15 16:30:56 
  * @Last Modified by: zhen wang
@@ -18,6 +21,7 @@ namespace tiger.Core
     /// <typeparam name="T">单例类型</typeparam>
     public class SingletonGameObject<T> : MonoBehaviour where T : MonoBehaviour
     {
+        
 #region Static Instance Member
         private static T instance = null;
 #endregion
