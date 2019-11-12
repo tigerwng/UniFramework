@@ -9,7 +9,7 @@ Unity推出的2d精灵图打包工具Sprite Packer和Sprite Atlas在使用过程
 1. Unity在2017版本只会实现了UI绘制polygon mesh的基础功能，那么就可以利用在sprite editor中自定义polygon outline来自定义一个Graphic组件或者自定义绘制顶点。
 
     _PolygonImage.cs_:
-    ![](https://raw.githubusercontent.com/tigerwng/UniFramework/master/Screenshots/Jietu20190416-143100.jpg)
+    ![](https://raw.githubusercontent.com/zw.UniFrameworkwng/UniFramework/master/Screenshots/Jietu20190416-143100.jpg)
 
 
 2. Unity 2018.3版本之后在Image脚本内添加了`useSpriteMesh`的布尔值成员变量，即Unity官方终于在UI中绘制polygon mesh的功能啦！！！

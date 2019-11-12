@@ -10,7 +10,7 @@ using System.Text;
 using UnityEngine;
 
 
-namespace tiger
+namespace zw.UniFramework
 {
     public static class NumberExtension
     {

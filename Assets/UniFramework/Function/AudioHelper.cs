@@ -11,7 +11,7 @@ using UnityEngine;
 
 
 
-namespace tiger
+namespace zw.UniFramework
 {
     public class AudioHelper : MonoBehaviour
     {

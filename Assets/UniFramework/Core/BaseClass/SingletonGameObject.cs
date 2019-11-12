@@ -13,7 +13,7 @@ using UnityEngine;
 using System.Collections;
 
 
-namespace tiger.Core
+namespace zw.UniFramework.Core
 {
     /// <summary>
     /// 单例类 - 单例对象，用于唯一的游戏对象

@@ -8,7 +8,7 @@
 
 using System;
 
-namespace tiger.Core
+namespace zw.UniFramework.Core
 {
     public class Singleton<T> where T : class, new()
     {
