@@ -8,7 +8,7 @@
 
 using System;
 
-namespace tiger
+namespace zw.UniFramework
 {
     public class TimeHelper
 	{

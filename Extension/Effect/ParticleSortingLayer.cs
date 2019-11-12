@@ -9,7 +9,7 @@
 using UnityEngine;
 
 
-namespace tiger.Extension.Effect
+namespace zw.UniFramework.Extension.Effect
 {
     [ExecuteInEditMode]
     public class ParticleSortingLayer : MonoBehaviour

@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace tiger
+namespace zw.UniFramework
 {
     public class StringHelper
     {

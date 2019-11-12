@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-namespace tiger.Extension.UI
+namespace zw.UniFramework.Extension.UI
 {
-    [AddComponentMenu("UniFramework/UI Effects/Gradient")]
-    public class UIGradient : BaseMeshEffect
+    [AddComponentMenu("UniFramework/Gradient", 1)]
+    public class VerticalGradient2Colors : BaseMeshEffect
     {
         public Color32 topColor = Color.white;
         public Color32 bottomColor = Color.black;

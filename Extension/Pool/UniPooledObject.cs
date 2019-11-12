@@ -8,7 +8,7 @@
 
 using System;
 using UnityEngine;
-using tiger;
+using zw.UniFramework;
 
 
 public abstract class UniPooledObject : MonoBehaviour

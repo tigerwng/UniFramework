@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
  
 
-namespace tiger.Extension.UI
+namespace zw.UniFramework.Extension.UI
 {
     public static class TextExtension
     {

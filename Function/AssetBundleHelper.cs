@@ -10,7 +10,7 @@ using System.IO;
 using UnityEngine;
 
 
-namespace tiger
+namespace zw.UniFramework
 {
     public static class AssetBundleHelper
     {

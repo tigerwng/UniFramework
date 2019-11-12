@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEditor;
 
 
-namespace tiger
+namespace zw.UniFramework
 {
     public static class CompileDLL
     {

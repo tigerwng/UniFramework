@@ -7,7 +7,7 @@
 
 using System;
 
-namespace tiger
+namespace zw.UniFramework
 {
     public delegate void MessageSender<T, C>(T sender, C content);
 

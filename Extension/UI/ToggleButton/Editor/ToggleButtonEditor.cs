@@ -9,7 +9,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using tiger.Extension.UI;
+using zw.UniFramework.Extension.UI;
 
 [CustomEditor(typeof(ToggleButton), true)]
 [CanEditMultipleObjects]

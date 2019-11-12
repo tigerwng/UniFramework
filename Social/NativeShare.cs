@@ -9,11 +9,15 @@ using UnityEngine;
 using System.Collections;
 using System.IO;
 using System.Runtime.InteropServices;
-using tiger.Core;
+using zw.UniFramework.Core;
 
 
+namespace zw.UniFramework.Social
+{
 
-public class NativeShare : SingletonAssetMonoBehaviour<NativeShare> 
+}
+
+public class NativeShare : SingletonComponent<NativeShare> 
 {
     public string Subject {private set; get;}
     public string ShareMessage {private set; get;}
@@ -104,7 +108,7 @@ public class NativeShare : SingletonAssetMonoBehaviour<NativeShare>
             intentObject.Call<AndroidJavaObject>("setType", "image/*");
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), ShareMessage);
 
-            AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Power By tigerWng");
+            AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Power By zw.UniFrameworkWng");
             currentActivity.Call("startActivity", jChooser);
         }
 
