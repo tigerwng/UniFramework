@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.namespace.unitypackageexample": "https://github.com/neogeek/unity-package-example.git#upm",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.3.2",
     "com.unity.collab-proxy": "1.2.16",
@@ -39,5 +40,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.namespace.unitypackageexample": {
+      "hash": "09f195ee58f9bda3cc0947a4cae91a29b9f33be2",
+      "revision": "upm"
+    }
   }
 }
