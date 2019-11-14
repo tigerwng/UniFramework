@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using UnityEditor;
 
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public class UniLogConfigurator
     {

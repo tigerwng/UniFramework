@@ -18,7 +18,7 @@ using CALL_BACL = System.Action<string>;
 
 
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     public class Toast : MonoBehaviour
     {

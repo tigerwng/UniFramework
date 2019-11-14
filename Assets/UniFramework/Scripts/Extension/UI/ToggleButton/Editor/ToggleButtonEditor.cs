@@ -9,12 +9,12 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using zw.UniFramework.Extension.UI;
+using zw.uniframework.Extension.UI;
 
 
-namespace zw.UniFramework.Extension.UI.Editor
+namespace zw.uniframework.Extension.UI.Editor
 {
-    [CustomEditor(typeof(zw.UniFramework.Extension.UI.ToggleButton), true)]
+    [CustomEditor(typeof(zw.uniframework.Extension.UI.ToggleButton), true)]
     [CanEditMultipleObjects]
     public class ToggleButtonEditor : UnityEditor.Editor
     {

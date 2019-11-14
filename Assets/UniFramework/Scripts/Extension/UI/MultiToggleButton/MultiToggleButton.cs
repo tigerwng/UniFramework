@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     #pragma warning disable 0649
     [AddComponentMenu("Custom/UI/Multi Toggle Button", 1)]

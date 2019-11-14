@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public static class StringExtension
     {

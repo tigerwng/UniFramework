@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Collections;
 
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     /// <summary>
     /// 代替空的Image使用，不占用overdraw资源，但是可以接收点击事件

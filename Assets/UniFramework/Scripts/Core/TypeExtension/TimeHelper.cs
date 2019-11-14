@@ -8,7 +8,7 @@
 
 using System;
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public class TimeHelper
 	{

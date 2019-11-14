@@ -10,11 +10,11 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using zw.UniFramework.Extension.UI;
+using zw.uniframework.Extension.UI;
 
-namespace zw.UniFramework.Extension.UI.Editor
+namespace zw.uniframework.Extension.UI.Editor
 {
-    [CustomEditor(typeof(zw.UniFramework.Extension.UI.MultiToggleButton), true)]
+    [CustomEditor(typeof(zw.uniframework.Extension.UI.MultiToggleButton), true)]
     [CanEditMultipleObjects]
     public class MultiToggleButtonEditor : UnityEditor.Editor
     {

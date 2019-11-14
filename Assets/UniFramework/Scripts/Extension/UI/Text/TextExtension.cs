@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
  
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     public static class TextExtension
     {
