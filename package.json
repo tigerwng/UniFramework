@@ -1,7 +1,7 @@
 {
     "name": "com.zw.UniFramework",
     "displayName": "UniFramework",
-    "version": "0.0.1",
-    "unity": "2019.1.7",
+    "version": "0.0.2",
+    "unity": "2018.3",
     "description": "UniFramework for easy programming on the Unity."
 }
