@@ -9,10 +9,10 @@ using UnityEngine;
 using System.Collections;
 using System.IO;
 using System.Runtime.InteropServices;
-using zw.UniFramework.Core;
+using zw.uniframework.Core;
 
 
-namespace zw.UniFramework.Social
+namespace zw.uniframework.Social
 {
 
 }
@@ -108,7 +108,7 @@ public class NativeShare : SingletonComponent<NativeShare>
             intentObject.Call<AndroidJavaObject>("setType", "image/*");
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), ShareMessage);
 
-            AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Power By zw.UniFrameworkWng");
+            AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Power By zw.uniframeworkWng");
             currentActivity.Call("startActivity", jChooser);
         }
 

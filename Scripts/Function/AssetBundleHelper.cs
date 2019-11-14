@@ -10,7 +10,7 @@ using System.IO;
 using UnityEngine;
 
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public static class AssetBundleHelper
     {

@@ -7,7 +7,7 @@
 
 using System;
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public delegate void MessageSender<T, C>(T sender, C content);
 

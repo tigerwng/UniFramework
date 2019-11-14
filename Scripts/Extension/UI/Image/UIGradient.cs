@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     [AddComponentMenu("UniFramework/Gradient", 1)]
     public class VerticalGradient2Colors : BaseMeshEffect

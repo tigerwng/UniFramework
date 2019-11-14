@@ -10,7 +10,7 @@ using System;
 using UnityEngine;
 
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public class MathHelper
     {

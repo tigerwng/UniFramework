@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace zw.UniFramework
+namespace zw.uniframework
 {
     public class StringHelper
     {

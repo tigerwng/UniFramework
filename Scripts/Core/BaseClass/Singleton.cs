@@ -8,7 +8,7 @@
 
 using System;
 
-namespace zw.UniFramework.Core
+namespace zw.uniframework.Core
 {
     public class Singleton<T> where T : class, new()
     {

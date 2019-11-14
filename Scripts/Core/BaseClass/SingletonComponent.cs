@@ -12,7 +12,7 @@ using System;
 using UnityEngine;
 
 
-namespace zw.UniFramework.Core
+namespace zw.uniframework.Core
 {
     public class SingletonComponent<T> : MonoBehaviour where T : MonoBehaviour
     {

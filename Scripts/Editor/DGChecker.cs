@@ -8,7 +8,7 @@
 #pragma warning disable 0429 //never used
 
 /***********************************************************************************************************
- * Produced by zw.UniFrameworkwng						   
+ * Produced by zw.uniframeworkwng						   
  * Clone by App Advisory - http://app-advisory.com						                      
  ***********************************************************************************************************/
 
@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace zw.UniFramework.UniFramework
+namespace zw.uniframework.UniFramework
 {
 	[InitializeOnLoad]
 	public class DGChecker : EditorWindow 

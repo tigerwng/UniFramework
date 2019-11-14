@@ -14,7 +14,7 @@ using UnityEngine.EventSystems;
 
 
 
-namespace zw.UniFramework.Extension.UI
+namespace zw.uniframework.Extension.UI
 {
     [AddComponentMenu("Custom/UI/Toggle Button", 1)]
     [RequireComponent(typeof(Image))]
